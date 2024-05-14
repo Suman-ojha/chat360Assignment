@@ -158,33 +158,14 @@ const Filter = () => {
               name="timestamp"
               value={formData.timestamp}
               onChange={handleInputChange}
+            //   pattern="\d{4}-\d{2}-\d{2}"
               placeholder="Timestamp"
             />
           </>
         ) : (
           <></>
         )}
-        <input
-          type="text"
-          name="spanId"
-          value={formData.spanId}
-          onChange={handleInputChange}
-          placeholder="Span ID"
-        />
-        <input
-          type="text"
-          name="commit"
-          value={formData.commit}
-          onChange={handleInputChange}
-          placeholder="Commit"
-        />
-        <input
-          type="text"
-          name="parentResourceId"
-          value={formData.parentResourceId}
-          onChange={handleInputChange}
-          placeholder="Parent Resource Id"
-        />
+       
 
         <br />
         <span style={{ color: "wheat" }}>Search From</span>
