@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  /* background: rgb(245, 222, 179);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 222, 179, 0.5289838347448355) 0%,
+    rgba(0, 0, 0, 1) 11%
+  ); */
+  background-color: black;
+  font-family: Montserrat;
+  height: 100vh;
+}
+
+.top {
+  margin-top: 110px;
+}
+
+.label {
+  display: inline-flex;
+  /* align-items: center; */
+  cursor: pointer;
+  color: #394a56;
+  text-align: center;
+  /* margin-top: 30vh; */
+  margin-left: 32%;
+}
+
+.label-text {
+  margin-left: 16px;
+}
+
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 220px;
+  width: 450px;
+  border-radius: 200px;
+  overflow: hidden;
+  box-shadow: -8px -4px 8px 0px, 8px 4px 12px 0px;
+}
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 225px;
+  width: 850px;
+  border-radius: 200px;
+  background: wheat;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35),
+    background 0.4s ease-out;
+  box-shadow: -8px -4px 8px 0px wheat, 8px 4px 12px 0px wheat;
+}
+
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+  background: grey;
+  box-shadow: -8px -4px 8px 0px grey, 8px 4px 12px 0px grey;
+}
+
+.page-wrapper {
+  /* height: 100vh; */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  /* background-color: #e3e7ea; */
+}
+.btn-round {
+  width: 100px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 20%;
+}
+
+.btn-wide {
+  width: 300px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #708090;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-normal {
+  /* box-shadow: -3px -3px 7px white, 3px 3px 7px white; */
+  background-color: wheat;
+  cursor: pointer;
+}
+
+.btn-pressed {
+  box-shadow: -3px -3px 7px grey inset, 3px 3px 7px grey inset;
+  background-color: grey;
+}
+
+.btn-normal:hover {
+  box-shadow: -3px -3px 7px grey inset, 3px 3px 7px grey inset;
+  background-color: grey;
+  font-size: 16px;
+  user-select: none;
+}
+
+.progress {
+  position: relative;
+  height: 10px;
+  width: 25%;
+  border: 10px solid wheat;
+  border-radius: 15px;
+  left: 455px;
+}
+.progress .color {
+  position: absolute;
+  background-color: #535353;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 3.2s infinite linear;
+}
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
