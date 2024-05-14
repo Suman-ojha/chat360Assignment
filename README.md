@@ -78,14 +78,12 @@ https://drive.google.com/file/d/1yEWF9ce-nk-nmuk6jfYmPpPu9XFLyz4_/view?usp=shari
 Clone the project
 
 ```bash
-  git clone https://github.com/AnuragRoshan/LogIngestor.git
+  git clone https://github.com/Suman-ojha/chat360Assignment.git
 ```
 
 Move into Project folder
 
-```bash
-cd november-2023-hiring-AnuragRoshan
-```
+
 
 Move into server and install node dependencies for server side
 
@@ -124,11 +122,11 @@ npm start
 
 ## Authors
 
-- [@AnuragRoshan](https://github.com/AnuragRoshan)
+- [@Suman-ojha](https://github.com/Suman-ojha)
 
 ## Feedback
 
-If you have any feedback, please reach out to us at anuragraushan373@gmail.com
+If you have any feedback, please reach out to us at sumanojha1999@gmail.com
 
 ## Toggle Role Page
 
