@@ -66,7 +66,7 @@ const Filter = () => {
     try {
       // Make sure your backend API endpoint is correct
       const response = await axios.post(
-        "http://localhost:3000/level",
+        "http://localhost:3000/api/level",
         formData
       );
 
@@ -266,17 +266,12 @@ const Filter = () => {
                   <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
                     {" "}
                     <span className="log-title">Level: </span>
-                    {item.level}
+                    {item?.level ?? 'N/A'}
                   </div>
                   <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
                     {" "}
-                    <span className="log-title">Message: </span>
-                    {item.message}
-                  </div>
-                  <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
-                    {" "}
-                    <span className="log-title">Resource Id: </span>
-                    {item.resourceId}
+                    <span className="log-title">log_string: </span>
+                    {item?.log_string ?? 'N/A'}
                   </div>
                   <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
                     {" "}
@@ -291,23 +286,8 @@ const Filter = () => {
                     }).format(new Date(item.timestamp))}
                   </div>
                   <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
-                    {" "}
-                    <span className="log-title">Trace Id: </span>
-                    {item.traceId}{" "}
-                  </div>
-                  <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
-                    {" "}
-                    <span className="log-title">Span Id: </span>
-                    {item.spanId}
-                  </div>
-                  <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
-                    {" "}
-                    <span className="log-title">Commit: </span>
-                    {item.commit}
-                  </div>
-                  <div style={{ flex: "1 0 50%", boxSizing: "border-box" }}>
                     <span className="log-title">Parent Resource Id:</span>{" "}
-                    {item.metadata.parentResourceId}
+                    {item.metadata.source ?? 'N/A'}
                   </div>
                 </div>
               </div>
